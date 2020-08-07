@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--  注意命名空间为该maper文件对应的DAO的全路径 -->
+<mapper namespace="com.ssm.rwsxx.dao.RwsxxDao" >
+
+    <resultMap id="rws_map" type="RwsBean">
+        <id property="task_id" column="task_id"/>
+        <result property="task_des" column="task_des"/>
+    </resultMap>
+
+    <!--需要注意id的值等于接口中方法的名字-->
+    <select id="rwslist" resultMap="rws_map">
+        select task_id,task_des
+        from ins_task
+    </select>
+</mapper>
