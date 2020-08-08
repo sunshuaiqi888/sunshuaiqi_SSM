@@ -36,7 +36,7 @@ public class RwsController {
 
             List<RwsBean> rwsxx = service.rwslist();
             if (rwsxx!=null && rwsxx.size()>0){
-
+                System.out.println("查询成功");
                 request.setAttribute("rwsxx",rwsxx);
 
             }
