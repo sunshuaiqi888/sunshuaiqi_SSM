@@ -55,7 +55,10 @@
     *.do(必须以.do结尾的路径才能访问。)
     -->
     <url-pattern>/</url-pattern>
+
+
   </servlet-mapping>
 
+  <!-- 配置静态资源 -->
 
 </web-app>
