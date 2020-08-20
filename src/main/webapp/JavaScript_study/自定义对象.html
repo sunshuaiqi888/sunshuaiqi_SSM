@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+自定义对象
+</body>
+
+<script type="text/javascript">
+
+    //1.object形式的自定义对象
+    var obj = new Object(); //对象实例
+    obj.name = "张三";
+    obj.age = 18;
+    obj.fuc = function(){
+        return 1+2;
+    }
+    console.log(obj);
+    alert(obj.fuc());
+
+
+    //2.花括号形式的自定义对象
+    var obj2 = {
+        name:"李四",
+        age: 18,
+        fuc: function () {
+            alert("自定义对象的方法")
+        }
+    }
+
+    obj2.fuc();
+
+</script>
+</html>

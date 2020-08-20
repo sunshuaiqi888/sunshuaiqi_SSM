@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+function.arguments
+参考学习网站：MDN web 文档
+</body>
+
+<script type="text/javascript">
+
+    //argument为隐形参数，类似于java中的 Object... 是一个伪数组(具有数组的一些特性，但不是数组)
+    function fuc(num1,num2){
+        var res = 0;
+        for (var i=0;i<arguments.length;i++){
+            res = res+arguments[i];
+        }
+        alert(Array.isArray([1,2]));
+        console.log(arguments);
+        console.log(res);
+    }
+    fuc(1,2,3,4,5,5);
+</script>
+</html>

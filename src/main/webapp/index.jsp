@@ -23,7 +23,7 @@
 </body>
 
 <script src="js/jquery.js"></script>
-<script>
+<script type="javascript">
 
 
 
@@ -44,6 +44,7 @@
         });
 
     })
+
 
 </script>
 

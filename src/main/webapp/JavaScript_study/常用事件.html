@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body onload="test_onload()">
+<h1>常用事件</h1>
+onload 加载完成事件 : 页面加载完成后，常用于js代码初始化操作<br>
+onclick   单击事件 :  用于按钮单击的响应操作<br>
+onblur 失去焦点事件 : 常用于输入框失去焦点后，验证输入的内容是否合法<br>
+onchange内容发生改变: 常用于下拉列表和输入框内容发生改变后的操作<br>
+onsubmit表单提交事件: 常用于表单提交前，验证所有表单是否合法<br>
+<br>
+onchange: <select id="sel" onchange="test_onchange()">
+    <option>神之意向</option>
+    <option>军神的心之所念</option>
+    <option>幸运三角</option>
+</select>
+<br>
+<form id="fo" action="http://www.baidu.com">
+    随便:<input type="text" id="val" />
+    <input type="submit" value="onsubmit方法" />
+</form>
+</body>
+
+<script type="text/javascript">
+
+    //js方法不能重载，会覆盖
+    //onload方法
+    function test_onload(){
+        alert("静态onload方法加载了")
+    }
+
+    window.onload = function () {
+        alert("动态onload方法加载了");
+    }
+
+    //onchange方法
+    function test_onchange(){
+       alert("选中:"+document.getElementById("sel").value)
+    }
+
+    //onsubmit  静态方法
+    function test_onsubmit(){
+        var val = document.getElementById("val").value;
+        console.log(val);
+        if (val == null || val == ""){
+            alert("信息不完整！");
+            return false;
+        }
+    }
+
+    //onsubmit  动态方法
+    window.onload = function () {
+        var form = document.getElementById("fo");
+        form.onsubmit = function () {
+            var val = document.getElementById("val").value;
+            if (val == null || val == ""){
+                alert("信息缺失！");
+                return false;
+            }
+        }
+    }
+
+
+</script>
+</html>
